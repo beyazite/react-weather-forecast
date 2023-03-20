@@ -45,7 +45,7 @@ export const WeatherProvider = ({children}) => {
       axios(`https://api.openweathermap.org/data/2.5/forecast?q=${newCity}&units=metric&cnt=5&appid=b8d2e66a05ba7e2c2d1f86b9e0c7607a`)
       .then((resp) => {setSecData(resp.data.list)
         setCountry(resp.data.city.country)
-      setZ(resp.data.city.name)})
+      setCity(resp.data.city.name)})
     },[newCity])
    
     // deny olduğunda bunu çalıştırmaya çalışacağım

@@ -12,7 +12,7 @@ function Forecast() {
 
   return (
     <div>
-      {inputF ?     <h1>{z}-{country}</h1> : <h1>{city}-{country}</h1> }
+      {newCity ?     <h1>{newCity}-{country}</h1> : <h1>{city}-{country}</h1> }
       <div className='card'>
 
         

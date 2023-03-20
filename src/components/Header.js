@@ -6,13 +6,13 @@ function Header() {
 
   const handleChange = (e) => {
     setNewCity(e.target.value);
-    setInputF(z);
     setData()
   }
 
   const handleClick = (e) => {
     setNewCity(e.currentTarget.value);
-    setInputF(z);
+    setData()
+
   }
   
 
