@@ -1,9 +1,20 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oswald:wght@300&display=swap');
+
 .App {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  background: #22aaff;
+  background: linear-gradient(to right, #22aaff, #26bbce);
+    margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 25px;
+  padding: 2rem 0 3rem 0;
+  color: white;
 }
 .card {
-  border: 1px solid brown;
-  background-color: azure;
+  /* border: 1px solid rgb(118, 117, 117); */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -11,9 +22,70 @@
   justify-content: space-evenly;
 }
 
+.dontQuestionMe {
+  padding: 1rem;
+}
+
+.dontQuestionMe::placeholder {
+  opacity: 0.3;
+  text-align: center;
+}
+
 .boxes {
-  border: 1px solid black;
-  border-radius: 3px;
+  /* border: 1px solid black; */
+  /* background-color: rgba(36, 75, 26, 0.511); */
+  border-radius: 25px;
   margin: 5px 0;
   width: 200px;
+  
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.moment-of-truth{
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.btn-container {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.city-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 125%;
+  padding: 0.5rem 0.2rem;
+  color: rgb(64, 63, 63);
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+}
+
+.city-btn:hover {
+  box-sizing: border-box;
+  -webkit-box-shadow: -7px 8px 7px 2px rgba(12,109,133,0.91);
+-moz-box-shadow: -7px 8px 7px 2px rgba(12,109,133,0.91);
+box-shadow: -7px 8px 7px 2px rgba(12,109,133,0.91);
+border: 1px solid #2193b0;
+}
+
+.city-btn:active {
+  -webkit-box-shadow: inset -9px 10px 9px 2px rgba(12,109,133,0.91);
+-moz-box-shadow: inset -9px 10px 9px 2px rgba(12,109,133,0.91);
+box-shadow: inset -9px 10px 9px 2px rgba(12,109,133,0.91);
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+img {
+  width: 35%;
 }
