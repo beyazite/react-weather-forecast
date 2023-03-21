@@ -23,7 +23,8 @@
 }
 
 .dontQuestionMe {
-  padding: 1rem;
+  padding: 0.7rem;
+  width: 20%;
 }
 
 .dontQuestionMe::placeholder {

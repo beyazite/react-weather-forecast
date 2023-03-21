@@ -12,13 +12,10 @@ export const WeatherProvider = ({children}) => {
    const [city,setCity] = useState();
    const [secData, setSecData] = useState([]);
    const [newCity,setNewCity] = useState("");
-   const [inputF, setInputF] = useState();
-   const [z,setZ] = useState();
    const [country,setCountry] = useState();
-   const values = {lat,long,data,city,secData,setNewCity,setData,inputF,setInputF,z,setZ,country};
+   const values = {data,city,secData,setNewCity,setData,country};
 
-   // koordinasyonu aldık her lat ve long değiştiğinde, eğer deny edilydiyse locAllow.umuzu false yapıyoruz. 
-   // false.sa axios farklı çalışacak.
+
     useEffect(()=>{
       
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -33,34 +30,18 @@ export const WeatherProvider = ({children}) => {
         setCountry(resp.data.city.country)
         setCity(resp.data.city.name)
     })
-   
-    
-  
-
-
-       
     },[lat,long]);
     
+
+
     useEffect(()=>{
       axios(`https://api.openweathermap.org/data/2.5/forecast?q=${newCity}&units=metric&cnt=5&appid=b8d2e66a05ba7e2c2d1f86b9e0c7607a`)
       .then((resp) => {setSecData(resp.data.list)
-        setCountry(resp.data.city.country)
-      setCity(resp.data.city.name)})
+      setCountry(resp.data.city.country)
+      setCity(resp.data.city.name)
+    })
     },[newCity])
    
-    // deny olduğunda bunu çalıştırmaya çalışacağım
-    // useEffect(()=>{
-    //      axios(`https://api.openweathermap.org/data/2.5/forecast?q=Adana&units=metric&cnt=5&appid=b8d2e66a05ba7e2c2d1f86b9e0c7607a`)
-    //   .then((resp) => {setData(resp.data.list)
-    //   resp.data.list.map((item)=>setCurrData(item))
-    // });
-    // },[])
-
-    // console.log("LAT:" , lat, "LONG:", long);
-      console.log(lat,long);
-     console.log(data);
-     console.log(city);
-     console.log(newCity);
 
 
 
